@@ -1,35 +1,30 @@
 .header
-  padding-top: 43px
-  height: 1039px
-  background: url(../img/header-bg.svg)
-  background-repeat: no-repeat
-  background-size: cover
-  &-container
-    max-width: 1734px
+  &__wrapper
+    padding-top: 43px
+    width: 87%
+    margin: auto
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__left
+    display: flex
+    align-items: center
+  &__ul
+    padding: 0
+    margin: 0
     margin-left: 64px
+    width: 428px
     display: flex
     align-items: center
     justify-content: space-between
-  &__wrapper
-    display: flex
-    align-items: center
-  &__navbar
-    margin-left: 64px
-    &-ul
-      margin: 0
-      padding: 0
-      display: flex
-      align-items: center
-      justify-content: space-between
-      width: 428px
-      list-style: none
-    &-item
-      font-family: 'Montserrat', sans-serif
-      font-style: normal
-      font-weight: normal
-      font-size: 17px
-      line-height: 21px
-      color: $font-color-secondary
+    list-style: none
+  &__item
+    font-family: 'Montserrat', sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: 17px
+    line-height: 21px
+    color: $font-color-secondary
   &__phone
     font-family: 'Montserrat', sans-serif
     font-style: normal
@@ -37,28 +32,3 @@
     font-size: 24px
     line-height: 29px
     color: $font-color-secondary
-  &__main
-    margin-top: 297px
-    margin-left: 213px
-    &-title
-      margin: 0
-      margin-bottom: 37px
-      max-width: 529px
-      font-family: 'Jost', sans-serif
-      font-style: normal
-      font-weight: bold
-      font-size: 60px
-      line-height: 54px
-      color: $font-color-primary
-    &-subtitle
-      font-family: 'Jost', sans-serif
-      font-style: normal
-      font-weight: normal
-      font-size: 27.0974px
-      line-height: 103.19%
-      letter-spacing: 0.02em
-    &-button
-      display: block
-      margin-top: 25px
-      padding: 18px 34px
-      border-radius: 8px
