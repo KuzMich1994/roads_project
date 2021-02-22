@@ -22,6 +22,10 @@ const swiper = new Swiper('.signs__slider', {
     },
     768: {
       spaceBetween: -450
+    },
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 0
     }
   },
 
