@@ -21,7 +21,7 @@
     &-title
       margin: 0
       margin-top: 15px
-      margin-bottom: 40px
+      margin-bottom: 42px
       font-family: 'Jost', sans-serif
       font-style: normal
       font-weight: bold
@@ -31,7 +31,7 @@
   &__pagination
     position: absolute
     left: 0
-    bottom: 0
+    bottom: 3px !important
     display: flex
     align-items: center
     z-index: 10
@@ -48,26 +48,11 @@
     &_active
       opacity: 1
   &__button
-    position: absolute
-    bottom: 7px
-    width: 7px
-    height: 14px
-    display: flex
-    align-items: center
-    z-index: 20
-    background-color: $font-color-secondary
-    &-prev
-      background: url(../img/signs-button.svg)
-      background-size: 7px 14px
-      background-repeat: no-repeat
-      transform: rotate(-180deg)
-      left: 111px
-      cursor: pointer
     &-next
-      background: url(../img/signs-button.svg)
-      background-size: 7px 14px
-      background-repeat: no-repeat
       left: 127px
-      cursor: pointer
+      bottom: 0
+    &-prev
+      left: 111px
+      bottom: 0
 
 

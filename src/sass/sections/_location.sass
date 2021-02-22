@@ -1,0 +1,69 @@
+// .location
+//   // display: none
+//   padding-bottom: 109px
+//   overflow: hidden
+//   &__wrapper
+//     width: 2097px
+//     margin-left: 264px
+//   &__slider
+//     padding-bottom: 44px
+//     &-slide
+//       height: 275px
+//       border-radius: 34px
+//       overflow: hidden
+//     &-img
+//       width: 509px
+//       height: 378px
+.location
+  padding-bottom: 109px
+  overflow: hidden
+  &__wrapper
+    width: 2097px
+    margin-left: 264px
+  &__title
+    font-family: 'Jost', sans-serif
+    font-style: normal
+    font-weight: bold
+    font-size: 43px
+    line-height: 100.69%
+    color: $font-color-primary
+  &__slider
+    padding-bottom: 44px
+    &-slide
+      width: 509px
+      height: 275px
+      border-radius: 34px
+      overflow: hidden
+    &-img
+      position: relative
+      height: 378px
+      object-fit: cover
+  &__button
+    &-prev
+      bottom: 0
+      left: 57px
+      z-index: 999
+    &-next
+      bottom: 0
+      left: 77px
+      z-index: 999
+  &__pagination
+    position: absolute
+    left: 105px !important
+    bottom: 4px !important
+    max-width: 72px
+    display: flex
+    align-items: center
+    z-index: 10
+  &__bullet
+    margin-right: 13px
+    width: 8px
+    height: 8px
+    border-radius: 100%
+    background-color: $font-color-secondary
+    opacity: .2
+    cursor: pointer
+    &:last-child
+      margin-right: 0
+    &_active
+      opacity: 1

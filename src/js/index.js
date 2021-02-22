@@ -1,3 +1,5 @@
+import Swiper from 'swiper/bundle';
+import 'swiper/swiper-bundle.css';
 import '../index.html';
 import '../css/style.css';
 import '../sass/style.sass';
@@ -20,7 +22,7 @@ const swiper = new Swiper('.signs__slider', {
       spaceBetween: 20,
       slidesPerView: 4
     },
-    768: {
+    769: {
       spaceBetween: -450
     },
     320: {
@@ -41,6 +43,38 @@ const swiper = new Swiper('.signs__slider', {
   navigation: {
     nextEl: '.signs__button-next',
     prevEl: '.signs__button-prev',
+  },
+});
+const swiper2 = new Swiper('.location__slider', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  slidesPerView: 'auto',
+  breakpoints: {
+    1201: {
+      spaceBetween: 20,
+    },
+    769: {
+      spaceBetween: 20,
+    },
+    320: {
+      spaceBetween: 0,
+      slidesPerView: 1
+    }
+  },
+
+  // If we need pagination
+  pagination: {
+    el: '.location__pagination',
+    bulletClass: 'location__bullet',
+    bulletActiveClass: 'location__bullet_active',
+    clickable: true
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.location__button-next',
+    prevEl: '.location__button-prev',
   },
 });
 

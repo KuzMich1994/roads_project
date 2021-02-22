@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Знаки дорожного ориентирования</title>
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
 </head>
 <body>
   <header class="header">
@@ -98,11 +98,64 @@
         </div>
       <div class="signs__pagination"></div>
 
-      <div class="signs__button signs__button-prev"></div>
-      <div class="signs__button signs__button-next"></div>
+      <div class="slider-button slider-button__prev signs__button-prev"></div>
+      <div class="slider-button slider-button__next signs__button-next"></div>
 
       </div>
   </section>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <section class="create-sign">
+    <img src="./img/create-sign__dots.svg" alt="Точки" class="create-sign__dots">
+    <div class="create-sign__wrapper">
+      <h2 class="create-sign__title">Создайте свой знак</h2>
+      <div class="create-sign__container">
+        <form id="create-sign__form" class="create-sign__form">
+          <h3 class="create-sign__form-title">Заполните форму для расчета стоимости знака</h3>
+          <input type="text" name="name" class="create-sign__form-input" placeholder="Название компании">
+          <input type="text" name="address" class="create-sign__form-input" placeholder="Точный адрес">
+          <input type="text" name="site" class="create-sign__form-input" placeholder="Сайт компании">
+          <input type="text" name="phone" class="create-sign__form-input" placeholder="Телефон">
+          <input type="submit" class="button create-sign__form-button" placeholder="Узнать стоимость знака">
+        </form>
+        <div class="create-sign__block">
+          <span class="create-sign__output">ГЛОБУС ГИПЕРМАРКЕТ</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="price">
+
+  </section> -->
+
+  <section class="location">
+    <div class="location__wrapper">
+      <h2 class="location__title">Примеры размещений</h2>
+      <!-- Slider main container -->
+      <div class="swiper-container location__slider">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide location__slider-slide location__slider-slide_first">
+            <img src="./img/location-1.png" alt="Пример" class="location__slider-img">
+          </div>
+          <div class="swiper-slide location__slider-slide location__slider-slide_second">
+            <img src="./img/location-2.png" alt="Пример" class="location__slider-img">
+          </div>
+          <div class="swiper-slide location__slider-slide location__slider-slide_thrid">
+            <img src="./img/location-3.png" alt="Пример" class="location__slider-img">
+          </div>
+          <div class="swiper-slide location__slider-slide location__slider-slide_fourth">
+            <img src="./img/location-4.png" alt="Пример" class="location__slider-img">
+          </div>
+        </div>
+        <div class="location__pagination"></div>
+        <div class="slider-button slider-button__prev location__button-prev"></div>
+        <div class="slider-button slider-button__next location__button-next"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
 </body>
 </html>
