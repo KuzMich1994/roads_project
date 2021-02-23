@@ -11,6 +11,7 @@ import '../img/general-dots.svg';
 import '../img/signs-slide.svg';
 import '../img/signs-button.svg';
 import showMobileMenu from './modules/showMobileMenu';
+import sendForm from './modules/sendForm';
 
 const swiper = new Swiper('.signs__slider', {
   // Optional parameters
@@ -78,5 +79,9 @@ const swiper2 = new Swiper('.location__slider', {
   },
 });
 
+swiper.init();
+swiper2.init();
+
 showMobileMenu();
+sendForm();
 
