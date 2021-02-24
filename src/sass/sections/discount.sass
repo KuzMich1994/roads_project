@@ -1,0 +1,62 @@
+.discount
+  padding-top: 124px
+  &__wrapper
+    max-width: 1433px
+    margin: auto
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__img
+    width: 634px
+    height: 558px
+  &__form
+    display: flex
+    flex-direction: column
+    width: 706px
+    max-height: 170px
+    &-wrapper
+      display: flex
+      align-items: flex-end
+      justify-content: space-between
+    &-title
+      margin: 0
+      margin-bottom: 15px
+      font-family: 'Jost', sans-serif
+      font-style: normal
+      font-weight: bold
+      font-size: 48px
+      line-height: 107.53%
+      color: $font-color-primary
+    &-subtitle
+      margin: 0
+      margin-bottom: 23px
+      font-family: 'Jost', sans-serif
+      font-style: normal
+      font-weight: 500
+      font-size: 20px
+      line-height: 103%
+      color: $font-color-secondary
+    &-input
+      width: 242px
+      height: 30px
+      border: 1px solid transparent
+      border-bottom: 1px solid rgba(84, 83, 105, .4)
+      &::placeholder
+        color: #716B7E
+        opacity: .7
+    &-button
+      padding: 19px 36px
+      border-radius: 8px
+  &-loader
+    margin-top: 10px
+    display: none
+    width: 40px
+    height: 40px
+    background-color: transparent
+    border: 3px solid rgba(44, 43, 67, 0.16)
+    border-top: 3px solid $button-color
+    border-radius: 100%
+    animation: spiner 1s infinite ease-in-out
+@keyframes spiner
+  to
+    transform: rotate(360deg)

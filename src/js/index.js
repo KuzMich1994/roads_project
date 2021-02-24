@@ -10,6 +10,7 @@ import '../img/general-bg.png';
 import '../img/general-dots.svg';
 import '../img/signs-slide.svg';
 import '../img/signs-button.svg';
+import '../img/discount-bg.png';
 import showMobileMenu from './modules/showMobileMenu';
 import sendForm from './modules/sendForm';
 import showTextOnBanner from './modules/showTextOnBanner';
