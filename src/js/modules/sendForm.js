@@ -81,15 +81,15 @@ const sendForm = createForm => {
     item.addEventListener('focus', e => {
       const target = e.target;
 
-      if (target.matches('#company')) {
-        showInfoText(target, counterText);
-      }
-      if (target.matches('#address')) {
-        showInfoText(target, addressText);
-      }
-      if (target.matches('#site')) {
-        showInfoText(target, siteText);
-      }
+      // if (target.matches('#company')) {
+      //   showInfoText(target, counterText);
+      // }
+      // if (target.matches('#address')) {
+      //   showInfoText(target, addressText);
+      // }
+      // if (target.matches('#site')) {
+      //   showInfoText(target, siteText);
+      // }
       if (target.matches('#phone')) {
         showInfoText(target, phoneText);
       }
@@ -97,13 +97,13 @@ const sendForm = createForm => {
   });
 
   createForm.addEventListener('change', () => {
-    inputs.forEach(item => {
-      if (item.value === '') {
-        createBtn.disabled = true;
-      } else {
-        createBtn.disabled = false;
-      }
-    });
+    // inputs.forEach(item => {
+    //   if (item.value === '') {
+    //     createBtn.disabled = true;
+    //   } else {
+    //     createBtn.disabled = false;
+    //   }
+    // });
   });
 
   const showLoadMessage = () => {
