@@ -12,6 +12,7 @@ import '../img/signs-slide.svg';
 import '../img/signs-button.svg';
 import showMobileMenu from './modules/showMobileMenu';
 import sendForm from './modules/sendForm';
+import showTextOnBanner from './modules/showTextOnBanner';
 
 const swiper = new Swiper('.signs__slider', {
   // Optional parameters
@@ -84,4 +85,5 @@ swiper2.init();
 
 showMobileMenu();
 sendForm();
+showTextOnBanner();
 

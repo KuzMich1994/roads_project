@@ -3,13 +3,13 @@ const showMobileMenu = () => {
   const mobileLines = mobileBtn.querySelectorAll('.header__mobile-button-line');
   const mobileMenu = document.querySelector('.header__mobile-menu');
 
-  mobileBtn.addEventListener('click', e => {
+  mobileBtn.addEventListener('click', () => {
     mobileLines.forEach(item => {
-      item.classList.toggle('header__mobile-button-line_active')
-    })
+      item.classList.toggle('header__mobile-button-line_active');
+    });
     mobileMenu.classList.toggle('header__mobile-menu_active');
   });
-  
+
 };
 
 export default showMobileMenu;

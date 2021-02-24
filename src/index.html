@@ -111,18 +111,30 @@
       <div class="create-sign__container">
         <form id="create-sign__form" class="create-sign__form">
           <h3 class="create-sign__form-title">Заполните форму для расчета стоимости знака</h3>
-          <input type="text" name="name" class="create-sign__form-input" placeholder="Название компании">
-          <input type="text" name="address" class="create-sign__form-input" placeholder="Точный адрес">
-          <input type="text" name="site" class="create-sign__form-input" placeholder="Сайт компании">
-          <input type="text" name="phone" class="create-sign__form-input" placeholder="Телефон">
-          <input type="submit" class="button create-sign__form-button" placeholder="Узнать стоимость знака">
+          <label class="create-sign__form-label">
+            <span class="create-sign__form-info create-sign__form-info_counter"></span>
+            <input type="text" name="name" id="company" class="create-sign__form-input" placeholder="Название компании" required>
+          </label>
+          <label class="create-sign__form-label">
+            <span class="create-sign__form-info create-sign__form-info_address"></span>
+            <input type="text" name="address" id="address" class="create-sign__form-input" placeholder="Точный адрес" required>
+          </label>
+          <label class="create-sign__form-label">
+            <span class="create-sign__form-info create-sign__form-info_site"></span>
+            <input type="text" name="site" id="site" class="create-sign__form-input" placeholder="Сайт компании" required>
+          </label>
+          <label class="create-sign__form-label">
+            <span class="create-sign__form-info create-sign__form-info_phone"></span>
+            <input type="tel" name="phone" id="phone" class="create-sign__form-input" placeholder="Телефон" required>
+          </label>
+          <button type="submit" class="button create-sign__form-button" title="Введите данные во все поля">Узнать стоимость знака</button>
           <div class="output-message">
             <div class="loader create-sign__form-loader"></div>
             <span class="message"></span>
           </div>
         </form>
         <div class="create-sign__block">
-          <span class="create-sign__output">ГЛОБУС ГИПЕРМАРКЕТ</span>
+          <span class="create-sign__output"></span>
         </div>
       </div>
     </div>

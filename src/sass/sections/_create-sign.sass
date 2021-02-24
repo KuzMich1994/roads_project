@@ -54,6 +54,20 @@
       border-radius: 8px
     &-loader
       margin-top: 10px
+    &-label
+      position: relative
+    &-info
+      position: absolute
+      left: 10px
+      bottom: 10px
+      &_counter
+        color: $button-color
+      &_address
+        color: $button-color
+      &_site
+        color: $button-color
+      &_phone
+        color: $button-color
   &__block
     position: relative
     width: 465px
@@ -68,6 +82,7 @@
     position: absolute
     bottom: 140px
     left: 159px
+    max-width: 235px
     font-family: 'Jost', sans-serif
     font-style: normal
     font-weight: bold
@@ -75,3 +90,4 @@
     line-height: 100.69%
     text-transform: uppercase
     transform: rotate(-1.6deg)
+    overflow: hidden
