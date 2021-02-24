@@ -150,6 +150,7 @@ const sendForm = createForm => {
         addressText.textContent = '';
         siteText.textContent = '';
         phoneText.textContent = '';
+        createBtn.disabled = true;
         setTimeout(() => {
           statusMessage.remove();
         }, 3000);
