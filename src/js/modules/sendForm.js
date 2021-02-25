@@ -24,10 +24,10 @@ const sendForm = (createForm, discountForm) => {
   counterText.classList.add('counter');
   statusMessage.classList.add('message');
   statusMessage2.classList.add('message');
-  createBtn.disabled = true;
-  discountBtn.disabled = true;
-  discountBtn.style.filter = 'opacity(20%)';
-  createBtn.style.filter = 'opacity(20%)';
+  // createBtn.disabled = true;
+  // discountBtn.disabled = true;
+  // discountBtn.style.filter = 'opacity(20%)';
+  // createBtn.style.filter = 'opacity(20%)';
 
   const postData = formData => fetch('./server.php', {
     method: 'POST',
@@ -50,16 +50,16 @@ const sendForm = (createForm, discountForm) => {
     }
   };
 
-  const validateCreateInputs = (selector, regPattern) => {
-    const regExp = regPattern.test(selector.value);
-    if (regExp) {
-      createBtn.disabled = false;
-      createBtn.style.filter = 'opacity(100%)';
-    } else {
-      createBtn.disabled = true;
-      createBtn.style.filter = 'opacity(20%)';
-    }
-  };
+  // const validateCreateInputs = (selector, regPattern) => {
+  //   const regExp = regPattern.test(selector.value);
+  //   if (regExp) {
+  //     createBtn.disabled = false;
+  //     createBtn.style.filter = 'opacity(100%)';
+  //   } else {
+  //     createBtn.disabled = true;
+  //     createBtn.style.filter = 'opacity(20%)';
+  //   }
+  // };
   const validateDiscountInputs = (selector, regPattern, regExp2) => {
     const regExp = regPattern.test(selector.value);
     if (selector.value.length > 12) {
@@ -107,51 +107,51 @@ const sendForm = (createForm, discountForm) => {
       if (target.matches('#site')) {
         siteText.textContent = 'Пример: https://www.google.com';
       }
-      if (target.matches('#phone')) {
-        // if (target.value !== '') {
-        //   createBtn.disabled = false;
-        // }
-        validateCreateInputs(target, /[0-9\\+]{11,12}/, /[^+\-()\d]/);
-        replaceValue(target, /[0-9]$/);
-        phoneText.textContent = 'Пример: 89999999999';
-      }
+      // if (target.matches('#phone')) {
+      //   // if (target.value !== '') {
+      //   //   createBtn.disabled = false;
+      //   // }
+      //   validateCreateInputs(target, /[0-9\\+]{11,12}/, /[^+\-()\d]/);
+      //   replaceValue(target, /[0-9]$/);
+      //   phoneText.textContent = 'Пример: 89999999999';
+      // }
     });
   });
 
-  discountInputs.forEach(item => {
-    item.addEventListener('input', e => {
-      const target = e.currentTarget;
+  // discountInputs.forEach(item => {
+  //   item.addEventListener('input', e => {
+  //     const target = e.currentTarget;
 
-      if (target.matches('#fio')) {
-        // validateInputs(target, '[а-яА-Я]{2,}', /[a-zA-Z0-9!@#$%^&*(){}_=+,./|]$/);
-        validateDiscountInputs(target, /^[а-яА-Я]{2,}$/);
-        nameText.textContent = 'Не менее двух символов кириллицы';
-        if (discountInputs[1].value === '') {
-          discountBtn.disabled = true;
-          discountBtn.style.filter = 'opacity(20%)';
-        }
-      }
-      if (target.matches('#tel')) {
-        // validateDiscountInputs(target, '[0-9\\+]{11,12}', /[^+\-()\d]/);
-        validateDiscountInputs(target, /[0-9\\+]{11,12}/, /[0-9]$/);
-        phoneText2.textContent = 'Пример: 89999999999';
-        if (discountInputs[0].value === '') {
-          discountBtn.disabled = true;
-          discountBtn.style.filter = 'opacity(20%)';
-        }
-      }
-    });
-  });
+  //     if (target.matches('#fio')) {
+  //       // validateInputs(target, '[а-яА-Я]{2,}', /[a-zA-Z0-9!@#$%^&*(){}_=+,./|]$/);
+  //       validateDiscountInputs(target, /^[а-яА-Я]{2,}$/);
+  //       nameText.textContent = 'Не менее двух символов кириллицы';
+  //       if (discountInputs[1].value === '') {
+  //         discountBtn.disabled = true;
+  //         discountBtn.style.filter = 'opacity(20%)';
+  //       }
+  //     }
+  //     if (target.matches('#tel')) {
+  //       // validateDiscountInputs(target, '[0-9\\+]{11,12}', /[^+\-()\d]/);
+  //       validateDiscountInputs(target, /[0-9\\+]{11,12}/, /[0-9]$/);
+  //       phoneText2.textContent = 'Пример: 89999999999';
+  //       if (discountInputs[0].value === '') {
+  //         discountBtn.disabled = true;
+  //         discountBtn.style.filter = 'opacity(20%)';
+  //       }
+  //     }
+  //   });
+  // });
 
-  createSignInputs.forEach(item => {
-    item.addEventListener('focus', e => {
-      const target = e.target;
+  // createSignInputs.forEach(item => {
+  //   item.addEventListener('focus', e => {
+  //     const target = e.target;
 
-      if (target.matches('#phone')) {
-        showInfoText(target, phoneText);
-      }
-    });
-  });
+  //     if (target.matches('#phone')) {
+  //       showInfoText(target, phoneText);
+  //     }
+  //   });
+  // });
 
   const showLoadMessage = () => {
     statusMessage.textContent = loadingMessage;
@@ -218,10 +218,10 @@ const sendForm = (createForm, discountForm) => {
         phoneText.textContent = '';
         nameText.textContent = '';
         phoneText2.textContent = '';
-        createBtn.disabled = true;
-        discountBtn.disabled = true;
-        discountBtn.style.filter = 'opacity(20%)';
-        createBtn.style.filter = 'opacity(20%)';
+        // createBtn.disabled = true;
+        // discountBtn.disabled = true;
+        // discountBtn.style.filter = 'opacity(20%)';
+        // createBtn.style.filter = 'opacity(20%)';
         setTimeout(() => {
           statusMessage.remove();
           statusMessage2.remove();

@@ -1,12 +1,14 @@
 @media ( max-width: 768px )
   .header
+    &__wrapper
+      padding-top: 25px
     &__left
       justify-content: space-between
       width: 100%
     &__mobile
       &-menu
         position: absolute
-        top: -120px
+        top: -160px
         left: 0
         right: 0
         display: flex
@@ -16,7 +18,7 @@
         z-index: 999
         transition: .5s
         &_active
-          top: 100px
+          top: 75px
       &-button
         position: relative
         display: flex
@@ -61,6 +63,7 @@
       display: none
       &_mobile
         display: flex
+        margin-bottom: 40px
   .main
     padding-top: 41px
     padding-bottom: 28px
@@ -112,7 +115,8 @@
       flex-direction: column
     &__title
       font-size: 32px
-      margin-bottom: 40px
+      margin-bottom: 15px
+      text-align: center
     &__form
       max-width: 365px
       margin-bottom: 30px
@@ -130,3 +134,5 @@
       &-img
         width: 100%
         height: auto
+  #company
+    margin-bottom: 30px
