@@ -4,6 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const autoprefixer = require('autoprefixer');
 const CopyPlugin = require("copy-webpack-plugin");
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 const mode = process.env.NODE_ENV;
 
@@ -19,7 +20,7 @@ module.exports = {
     filename: `./js/${generatefilename('js')}`,
     path: path.resolve(__dirname, 'build'),
   },
-  mode, 
+  mode,
   context: path.resolve(__dirname, 'src'),
   plugins: [
     new HtmlWebpackPlugin({
@@ -37,9 +38,20 @@ module.exports = {
         {
           from: 'server',
           to: './'
+        },
+        {
+          from: 'img/',
+          to: 'img'
         }
       ]
     }),
+    new ImageminPlugin({
+      disable: isDev,
+      pngquant: {
+        quality: '50-55'
+      },
+      test: /\.(jpe?g|png|gif)$/i,
+    })
   ],
   module: {
     rules: [

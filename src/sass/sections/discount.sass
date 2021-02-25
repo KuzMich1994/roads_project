@@ -11,6 +11,7 @@
     width: 634px
     height: 558px
   &__form
+    position: relative
     display: flex
     flex-direction: column
     width: 706px
@@ -48,6 +49,16 @@
     &-button
       padding: 19px 36px
       border-radius: 8px
+    &-info
+      position: absolute
+      left: 0
+      bottom: -20px
+      font-size: 14px
+      &_name
+        color: $button-color
+      &_phone
+        color: $button-color
+        left: 270px
   &-loader
     margin-top: 10px
     display: none

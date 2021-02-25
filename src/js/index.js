@@ -11,6 +11,10 @@ import '../img/general-dots.svg';
 import '../img/signs-slide.svg';
 import '../img/signs-button.svg';
 import '../img/discount-bg.png';
+import '../img/location-1.jpg';
+import '../img/location-2.jpg';
+import '../img/location-3.jpg';
+import '../img/location-4.jpg';
 import showMobileMenu from './modules/showMobileMenu';
 import sendForm from './modules/sendForm';
 import showTextOnBanner from './modules/showTextOnBanner';
@@ -58,7 +62,9 @@ const swiper2 = new Swiper('.location__slider', {
       spaceBetween: 20,
     },
     769: {
-      spaceBetween: 20,
+      spaceBetween: 30,
+      slidesPerView: 4,
+      width: 1807
     },
     320: {
       spaceBetween: 0,

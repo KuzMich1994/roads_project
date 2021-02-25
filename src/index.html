@@ -136,6 +136,7 @@
             </div>
           </form>
           <div class="create-sign__block">
+            <span class="create-sign__output"></span>
           </div>
         </div>
       </div>
@@ -154,16 +155,16 @@
           <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide location__slider-slide location__slider-slide_first">
-              <img src="./img/location-1.png" alt="Пример" class="location__slider-img">
+              <img src="./img/location-1.jpg" alt="Пример" class="location__slider-img">
             </div>
             <div class="swiper-slide location__slider-slide location__slider-slide_second">
-              <img src="./img/location-2.png" alt="Пример" class="location__slider-img">
+              <img src="./img/location-2.jpg" alt="Пример" class="location__slider-img">
             </div>
             <div class="swiper-slide location__slider-slide location__slider-slide_thrid">
-              <img src="./img/location-3.png" alt="Пример" class="location__slider-img">
+              <img src="./img/location-3.jpg" alt="Пример" class="location__slider-img">
             </div>
             <div class="swiper-slide location__slider-slide location__slider-slide_fourth">
-              <img src="./img/location-4.png" alt="Пример" class="location__slider-img">
+              <img src="./img/location-4.jpg" alt="Пример" class="location__slider-img">
             </div>
           </div>
           <div class="location__pagination"></div>
@@ -182,11 +183,11 @@
           <div class="discount__form-wrapper">
             <label class="discount__form-label">
               <span class="discount__form-info discount__form-info_name"></span>
-              <input type="text" name="name" class="discount__form-input" placeholder="Ваше имя">
+              <input type="text" name="name" id="fio" class="discount__form-input" placeholder="Ваше имя*">
             </label>
             <label class="discount__form-label">
               <span class="discount__form-info discount__form-info_phone"></span>
-              <input type="tel" name="phone" class="discount__form-input" placeholder="Ваш телефон">
+              <input type="tel" name="phone" id="tel" class="discount__form-input" placeholder="Ваш телефон*">
             </label>
             <input type="submit" class="button discount__form-button">
           </div>
