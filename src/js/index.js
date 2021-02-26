@@ -25,6 +25,10 @@ const swiper = new Swiper('.signs__slider', {
   loop: true,
   slidesPerView: 4,
   breakpoints: {
+    1921: {
+      spaceBetween: 80,
+      width: 1920
+    },
     1201: {
       spaceBetween: 20,
       slidesPerView: 4
@@ -33,8 +37,9 @@ const swiper = new Swiper('.signs__slider', {
       spaceBetween: -450
     },
     320: {
-      slidesPerView: 1,
-      spaceBetween: 0
+      slidesPerView: 2,
+      spaceBetween: 10,
+      width: 510
     }
   },
 
@@ -58,6 +63,11 @@ const swiper2 = new Swiper('.location__slider', {
   loop: true,
   slidesPerView: 'auto',
   breakpoints: {
+    1921: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+      width: 1920
+    },
     1201: {
       spaceBetween: 20,
     },
@@ -67,8 +77,9 @@ const swiper2 = new Swiper('.location__slider', {
       width: 1807
     },
     320: {
-      spaceBetween: 0,
-      slidesPerView: 1
+      spaceBetween: 10,
+      slidesPerView: 2,
+      width: 510
     }
   },
 
