@@ -11,7 +11,6 @@ const sendForm = (createForm, discountForm) => {
   const messageBlock = document.querySelector('.output-message');
   const messageBlock2 = document.querySelector('.output-discount');
   const createSignInputs = document.querySelectorAll('.create-sign__form-input');
-  const discountInputs = document.querySelectorAll('.discount__form-input');
   const inputsDiscount = document.querySelectorAll('.discount__form-input');
   const counterText = document.querySelector('.create-sign__form-info_counter');
   const addressText = document.querySelector('.create-sign__form-info_address');
@@ -19,15 +18,9 @@ const sendForm = (createForm, discountForm) => {
   const phoneText = document.querySelector('.create-sign__form-info_phone');
   const phoneText2 = document.querySelector('.discount__form-info_phone');
   const nameText = document.querySelector('.discount__form-info_name');
-  const createBtn = document.querySelector('.create-sign__form-button');
-  const discountBtn = document.querySelector('.discount__form-button');
   counterText.classList.add('counter');
   statusMessage.classList.add('message');
   statusMessage2.classList.add('message');
-  // createBtn.disabled = true;
-  // discountBtn.disabled = true;
-  // discountBtn.style.filter = 'opacity(20%)';
-  // createBtn.style.filter = 'opacity(20%)';
 
   const postData = formData => fetch('./server.php', {
     method: 'POST',
@@ -44,36 +37,6 @@ const sendForm = (createForm, discountForm) => {
     }
   };
 
-  const replaceValue = (selector, regExp) => {
-    if (selector.value.length > 12) {
-      selector.value = selector.value.replace(regExp, '');
-    }
-  };
-
-  // const validateCreateInputs = (selector, regPattern) => {
-  //   const regExp = regPattern.test(selector.value);
-  //   if (regExp) {
-  //     createBtn.disabled = false;
-  //     createBtn.style.filter = 'opacity(100%)';
-  //   } else {
-  //     createBtn.disabled = true;
-  //     createBtn.style.filter = 'opacity(20%)';
-  //   }
-  // };
-  const validateDiscountInputs = (selector, regPattern, regExp2) => {
-    const regExp = regPattern.test(selector.value);
-    if (selector.value.length > 12) {
-      selector.value = selector.value.replace(regExp2, '');
-    }
-    if (regExp) {
-      discountBtn.disabled = false;
-      discountBtn.style.filter = 'opacity(100%)';
-    } else {
-      discountBtn.disabled = true;
-      discountBtn.style.filter = 'opacity(20%)';
-    }
-  };
-
   const showCounter = (selector, reg) => {
     const regExp = reg.test(selector.value);
 
@@ -86,12 +49,6 @@ const sendForm = (createForm, discountForm) => {
     }
   };
 
-  const showInfoText = (selector, infoText) => {
-    if (selector.value === '') {
-      infoText.textContent = 'Пожалуйста, заполните это поле';
-    }
-  };
-
   createSignInputs.forEach(item => {
     item.addEventListener('input', e => {
       const target = e.target;
@@ -101,67 +58,18 @@ const sendForm = (createForm, discountForm) => {
         showCounter(target, /[А-Яа-я0-9\s\\"\\']{1,18}$/);
       }
       if (target.matches('#address')) {
-        // validateInputs(target, '[а-яА-ЯЁё0-9.,\\s]{1,}', /[a-zA-Z!@#$%^&*\\()\\{}\\+=_"']$/, addressText);
         addressText.textContent = 'Пример: г.Москва ул.Арбат д.1 к.2 с.1';
       }
       if (target.matches('#site')) {
         siteText.textContent = 'Пример: https://www.google.com';
       }
-      // if (target.matches('#phone')) {
-      //   // if (target.value !== '') {
-      //   //   createBtn.disabled = false;
-      //   // }
-      //   validateCreateInputs(target, /[0-9\\+]{11,12}/, /[^+\-()\d]/);
-      //   replaceValue(target, /[0-9]$/);
-      //   phoneText.textContent = 'Пример: 89999999999';
-      // }
     });
   });
-
-  // discountInputs.forEach(item => {
-  //   item.addEventListener('input', e => {
-  //     const target = e.currentTarget;
-
-  //     if (target.matches('#fio')) {
-  //       // validateInputs(target, '[а-яА-Я]{2,}', /[a-zA-Z0-9!@#$%^&*(){}_=+,./|]$/);
-  //       validateDiscountInputs(target, /^[а-яА-Я]{2,}$/);
-  //       nameText.textContent = 'Не менее двух символов кириллицы';
-  //       if (discountInputs[1].value === '') {
-  //         discountBtn.disabled = true;
-  //         discountBtn.style.filter = 'opacity(20%)';
-  //       }
-  //     }
-  //     if (target.matches('#tel')) {
-  //       // validateDiscountInputs(target, '[0-9\\+]{11,12}', /[^+\-()\d]/);
-  //       validateDiscountInputs(target, /[0-9\\+]{11,12}/, /[0-9]$/);
-  //       phoneText2.textContent = 'Пример: 89999999999';
-  //       if (discountInputs[0].value === '') {
-  //         discountBtn.disabled = true;
-  //         discountBtn.style.filter = 'opacity(20%)';
-  //       }
-  //     }
-  //   });
-  // });
-
-  // createSignInputs.forEach(item => {
-  //   item.addEventListener('focus', e => {
-  //     const target = e.target;
-
-  //     if (target.matches('#phone')) {
-  //       showInfoText(target, phoneText);
-  //     }
-  //   });
-  // });
 
   const showLoadMessage = () => {
     statusMessage.textContent = loadingMessage;
     statusMessage.style.display = 'block';
     spiner.style.display = 'block';
-  };
-  const showLoadMessageDiscount = () => {
-    statusMessage2.textContent = loadingMessage;
-    statusMessage2.style.display = 'block';
-    spiner2.style.display = 'block';
   };
 
   let formData;
@@ -182,8 +90,9 @@ const sendForm = (createForm, discountForm) => {
     }
 
     if (target.matches('#discount-form')) {
+      messageBlock2.append(spiner);
       messageBlock2.append(statusMessage);
-      showLoadMessageDiscount();
+      showLoadMessage();
       formData = new FormData(discountForm);
       for (const val of formData) {
         body[val[0]] = val[1];
