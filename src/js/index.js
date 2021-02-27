@@ -18,6 +18,7 @@ import '../img/location-4.jpg';
 import showMobileMenu from './modules/showMobileMenu';
 import sendForm from './modules/sendForm';
 import showTextOnBanner from './modules/showTextOnBanner';
+import toggleTabs from './modules/toggleTabs';
 
 const swiper = new Swiper('.signs__slider', {
   // Optional parameters
@@ -104,4 +105,5 @@ swiper2.init();
 showMobileMenu();
 sendForm();
 showTextOnBanner();
+toggleTabs();
 

@@ -1,0 +1,111 @@
+.price
+  padding-top: 89px
+  padding-bottom: 84.5px
+  &__wrapper
+    max-width: 699px
+    margin: auto
+  &__title
+    margin: 0
+    margin-bottom: 26px
+    font-family: 'Jost', sans-serif
+    font-style: normal
+    font-weight: bold
+    font-size: 44px
+    line-height: 96.19%
+    color: $font-color-primary
+  &__table
+    display: flex
+    flex-direction: column
+    justify-content: center
+    &-tabs
+      margin-bottom: -1px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      max-width: 479px
+    &-tab
+      padding: 15px 27px
+      background-color: #F0EFFE
+      border: 1px solid #D7D6E1
+      cursor: pointer
+      &:first-child
+        border-radius: 8px 0px 0px 0px
+      &:last-child
+        border-radius: 0px 8px 0px 0px
+      &_active
+        background-color: #fff
+        border: none
+      &-text
+        font-family: 'Jost', sans-serif
+        font-style: normal
+        font-weight: bold
+        font-size: 18px
+        line-height: 81.03%
+        color: $font-color-primary
+    &-grid
+      display: none
+      grid-template-columns: 348px 169px 182px
+      background-color: #fff
+      height: 613px
+      transition: all .5s ease
+      overflow-y: scroll
+      border-radius: 0px 8px 8px 8px
+      &::-webkit-scrollbar
+        display: none
+      &_active
+        display: grid
+        transition: all .5s ease
+    &-type
+      grid-template-rows: 102px 1fr
+      display: grid
+      grid-column: 1/2
+    &-cost
+      grid-template-rows: 102px 1fr
+      display: grid
+      grid-column: 2/3
+    &-pay
+      grid-template-rows: 102px 1fr
+      display: grid
+      grid-column: 3/4
+    &-title
+      margin: 0
+      font-family: 'Montserrat', sans-serif
+      font-style: normal
+      font-weight: 600
+      font-size: 17px
+      line-height: 21px
+      align-self: center
+      color: $font-color-primary
+      &_first
+        padding-left: 28px
+      &_second
+        max-width: 107px
+    &-ul
+      display: grid
+      grid-template-rows: 88px 71px 71px 71px 71px 88px 88px 88px 88px
+      margin: 0
+      padding: 0
+      border-top: 2px solid #E3E3E3
+      list-style: none
+      &_second
+        grid-template-rows: 88px 88px 71px 71px 71px 71px 88px 88px 88px 88px
+      &_thrid
+        grid-template-rows: 88px 88px
+    &-item
+      position: relative
+      padding-top: 18px
+      font-family: 'Montserrat', sans-serif
+      font-style: normal
+      font-weight: 500
+      font-size: 17px
+      line-height: 148%
+      color: #545454
+      border-bottom: 1px solid #E3E3E3
+      &:last-child
+        border-bottom: none
+      &_first
+        padding-left: 28px
+      &_padding
+        padding-top: 33px
+      &_pt
+        padding-top: 23px
