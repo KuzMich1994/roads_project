@@ -16,9 +16,9 @@
           </a>
           <nav class="header__navbar">
             <ul class="header__ul">
-              <li class="header__item"><a href="#" class="header__link">Чем мы полезны</a></li>
-              <li class="header__item"><a href="#" class="header__link">Виды знаков</a></li>
-              <li class="header__item"><a href="#" class="header__link">Цены</a></li>
+              <li class="header__item"><a href="#about" class="header__link">Чем мы полезны</a></li>
+              <li class="header__item"><a href="#signs" class="header__link">Виды знаков</a></li>
+              <li class="header__item"><a href="#price" class="header__link">Цены</a></li>
             </ul>
           </nav>
           <div class="header__mobile-button-mask"></div>
@@ -33,9 +33,9 @@
       <div class="header__mobile-menu">
         <nav class="header__navbar header__navbar_mobile">
             <ul class="header__ul header__ul_mobile">
-              <li class="header__item"><a href="#" class="header__link">Чем мы полезны</a></li>
-              <li class="header__item"><a href="#" class="header__link">Виды знаков</a></li>
-              <li class="header__item"><a href="#" class="header__link">Цены</a></li>
+              <li class="header__item"><a href="#about" class="header__link">Чем мы полезны</a></li>
+              <li class="header__item"><a href="#signs" class="header__link">Виды знаков</a></li>
+              <li class="header__item"><a href="#price" class="header__link">Цены</a></li>
             </ul>
           </nav>
           <a href="#tel84956431834" class="header__phone header__phone_mobile">8 495 643 18 34</a>
@@ -50,7 +50,7 @@
           <div class="main__left">
             <h1 class="main__title">Знаки дорожного ориентирования</h1>
             <span class="main__subtitle">для вашего бизнеса</span>
-            <button class="button main__button">Узнать цену</button>
+            <a href="#price" class="button main__button">Узнать цену</a>
           </div>
           <div class="main__right">
             <img src="./img/main-bg-2.png" alt="" class="main__bg">
@@ -73,7 +73,7 @@
       </div>
     </section>
   
-    <section class="signs">
+    <section class="signs" id="signs">
       <div class="signs__wrapper">
         <h2 class="signs__title">Какие бывают знаки</h2>
         <div class="swiper-container signs__slider">
@@ -144,18 +144,18 @@
       </div>
     </section>
   
-    <section class="price">
+    <section class="price" id="price">
       <div class="price__wrapper">
         <h2 class="price__title">Наши цены</h2>
         <div class="price__table">
           <div class="price__table-tabs">
-            <div class="price__table-tab price__table-tab_active" data-id="0">
+            <div class="price__table-tab price__table-tab_active">
               <span class="price__table-tab-text">Внутри ТТК</span>
             </div>
-            <div class="price__table-tab" data-id="1">
+            <div class="price__table-tab">
               <span class="price__table-tab-text">От ТТК до МКАД</span>
             </div>
-            <div class="price__table-tab" data-id="2">
+            <div class="price__table-tab">
               <span class="price__table-tab-text">МКАД</span>
             </div>
           </div>
@@ -304,7 +304,7 @@
       </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
       <div class="about__wrapper">
         <h2 class="about__title">Что мы делаем</h2>
         <div class="about__cards">

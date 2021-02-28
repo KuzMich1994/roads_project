@@ -19,7 +19,7 @@ import showMobileMenu from './modules/showMobileMenu';
 import sendForm from './modules/sendForm';
 import showTextOnBanner from './modules/showTextOnBanner';
 import toggleTabs from './modules/toggleTabs';
-import changeOrientation from './modules/changeOrientation';
+import scrollToBlock from './modules/scrollToBlock';
 
 const swiper = new Swiper('.signs__slider', {
   // Optional parameters
@@ -107,5 +107,4 @@ showMobileMenu();
 sendForm();
 showTextOnBanner();
 toggleTabs();
-changeOrientation();
-
+scrollToBlock();
