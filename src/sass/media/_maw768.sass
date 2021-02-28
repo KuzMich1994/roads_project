@@ -98,8 +98,12 @@
         font-size: 18px
         order: 0
   .main
+    display: flex
+    align-items: center
+    justify-content: center
     padding-top: 41px
-    padding-bottom: 28px
+    padding-bottom: 68px
+    height: 100vh
     &__dots
       display: none
     &__wrapper
@@ -129,6 +133,8 @@
       max-width: 768px
       width: 92%
       margin: auto
+      margin-right: 0
+      // overflow: visible
     &__title
       margin-bottom: 16px
       font-size: 26px
@@ -155,10 +161,12 @@
       max-width: 365px
       margin-bottom: 30px
   .location
+    padding-bottom: 50px
     &__wrapper
       // max-width: 768px
-      width: 92%
+      width: 96%
       margin: auto
+      margin-right: 0
     &__title
       font-size: 26px
     &__slider
@@ -173,6 +181,7 @@
     margin-bottom: 30px
   .price
     &__wrapper
+      max-width: 519px
       width: 92%
     &__title
       margin-bottom: 16px
@@ -185,6 +194,50 @@
         padding: 14px 16px
         &-text
           font-size: 16px
+          line-height: 101%
       &-grid
         border-radius: 0px 0px 8px 8px
+        grid-template-columns: 262px 117px 142px
+        height: 427px
+      &-ul
+        grid-template-rows: 100px 63px 63px 63px 63px 81px 81px 81px 81px
+        &_second
+          grid-template-rows: 100px 100px 63px 63px 63px 63px 81px 81px 81px 81px
+        &_thrid
+          grid-template-rows: 81px 81px
+      &-title
+        font-size: 14px
+        padding-left: 17px
+        line-height: 15px
+      &-item
+        padding-left: 17px
+        font-size: 14px
+        line-height: 20px
+        &_padding
+          padding-top: 43px
+        // &_pt
+        //   padding-top: 28px !
+        &_first
+          &:first-child
+            padding-right: 10px
+  .about
+    padding-top: 50px
+    &__wrapper
+      width: 92%
+    &__title
+      margin-bottom: 30px
+      font-size: 36px
+    &__cards
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-rows: repeat(3, 1fr)
+      grid-column-gap: 40px
+    &__card
+      &-icon
+        margin-bottom: 10px
+      &-title
+        font-size: 18px
+        line-height: 18px
+      &-text
+        font-size: 15px
+        line-height: 120%
 
