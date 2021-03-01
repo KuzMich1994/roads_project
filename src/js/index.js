@@ -28,7 +28,7 @@ const swiper = new Swiper('.signs__slider', {
   slidesPerView: 4,
   breakpoints: {
     1921: {
-      spaceBetween: 80,
+      spaceBetween: 0,
       width: 1920
     },
     1201: {
@@ -67,7 +67,7 @@ const swiper2 = new Swiper('.location__slider', {
   breakpoints: {
     1921: {
       slidesPerView: 3,
-      spaceBetween: 50,
+      spaceBetween: 20,
       width: 1920
     },
     1201: {

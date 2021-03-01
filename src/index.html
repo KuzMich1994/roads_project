@@ -4,15 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Знаки дорожного ориентирования</title>
-  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
 </head>
 <body>
   <div class="container">
-    <header class="header">
+    <header class="header" id="top">
       <div class="header__wrapper">
         <div class="header__left">
-          <a href="#" class="header__logo">
-            <img src="./img/Logo.svg" alt="Логотип">
+          <a href="#top" class="header__logo">
+            <img src="./img/Logo.svg" alt="Логотип" class="header__img">
           </a>
           <nav class="header__navbar">
             <ul class="header__ul">
@@ -28,7 +27,7 @@
             <span class="header__mobile-button-line"></span>
           </div>
         </div>
-        <a href="#tel84956431834" class="header__phone">8 495 643 18 34</a>
+        <a href="tel:84956431834" class="header__phone">8 495 643 18 34</a>
       </div>
       <div class="header__mobile-menu">
         <nav class="header__navbar header__navbar_mobile">
@@ -316,7 +315,7 @@
           <div class="about__card">
             <img src="./img/Edit.svg" alt="Иконка" class="about__card-icon">
             <h3 class="about__card-title">Разработка макета</h3>
-            <p class="about__card-text">Разработка, согласование и создание знака в соответствии с требованиями города</p>
+            <p class="about__card-text">Разработка, согласование и создание знака в соответствии с&nbsp;требованиями города</p>
           </div>
           <div class="about__card">
             <img src="./img/Time-Circle.svg" alt="Иконка" class="about__card-icon">
@@ -365,8 +364,16 @@
         </form>
       </div>
     </section>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <a href="#top" class="footer__logo">
+          <img src="./img/Logo.svg" alt="Логотип" class="footer__img">
+        </a>
+        <a href="#" class="footer__policy">Политика конфеденциальности</a>
+        <a href="tel:84956431834" class="footer__phone">8 495 643 18 34</a>
+      </div>
+    </footer>
   </div>
 
-  <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
 </body>
 </html>
