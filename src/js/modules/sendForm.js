@@ -22,7 +22,7 @@ const sendForm = (createForm, discountForm) => {
   statusMessage.classList.add('message');
   statusMessage2.classList.add('message');
 
-  const postData = formData => fetch('./server.php', {
+  const postData = formData => fetch('./send.php', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

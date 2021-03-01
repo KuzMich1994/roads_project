@@ -1,5 +1,6 @@
 @media ( max-width: 768px )
   .header
+    padding-bottom: 20px
     &__wrapper
       padding-top: 25px
     &__left
@@ -101,8 +102,8 @@
     display: flex
     align-items: center
     justify-content: center
-    padding-top: 41px
-    padding-bottom: 68px
+    padding-top: 0
+    padding-bottom: 50px
     height: 100vh
     &__dots
       display: none
@@ -123,15 +124,19 @@
     &__title
       text-align: center
   .general
+    padding-top: 0
     &__dots
       display: none
     &__wrapper
       max-width: 400px
       width: 92%
+    &__title
+      margin-bottom: 14px
   .signs
     &__wrapper
       max-width: 768px
       width: 92%
+      // margin-left: 4%
       margin: auto
       margin-right: 0
       // overflow: visible
@@ -179,6 +184,13 @@
         height: auto
   #company
     margin-bottom: 30px
+  .discount
+    padding-top: 50px
+    &__form
+      &-title
+        margin-bottom: 20px
+      &-subtitle
+        margin-bottom: 30px
   .price
     &__wrapper
       max-width: 519px
@@ -222,6 +234,7 @@
             padding-right: 10px
   .about
     padding-top: 50px
+    padding-bottom: 50px
     &__wrapper
       width: 92%
     &__title
@@ -229,17 +242,19 @@
       font-size: 36px
     &__cards
       grid-template-columns: repeat(2, 1fr)
-      grid-template-rows: repeat(3, 1fr)
-      grid-column-gap: 40px
+      // grid-template-rows: repeat(3, 1fr)
+      grid-template-rows: 1fr max-content 1fr
+      grid-column-gap: 48px
     &__card
       &-icon
         margin-bottom: 10px
       &-title
+        margin-bottom: 10px
         font-size: 18px
         line-height: 18px
       &-text
         font-size: 15px
-        line-height: 120%
+        line-height: 140%
   .footer
     padding-top: 30px
     padding-bottom: 28px

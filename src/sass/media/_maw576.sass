@@ -24,6 +24,7 @@
       width: 100%
       height: 100%
   .signs
+    padding-top: 67px
     padding-bottom: 48px
     overflow: hidden
     &__pagination
@@ -43,6 +44,7 @@
     padding-top: 25px
   .discount
     padding-top: 40px
+    padding-bottom: 50px
     &__img
       width: 95%
       height: auto
@@ -106,23 +108,37 @@
         // grid-template-columns: 226px 117px 142px
   .about
     padding-bottom: 50px
+    &__wrapper
+      max-width: 270px
     &__title
       text-align: center
       font-size: 30px
     &__cards
-      grid-template-columns: 1fr
+      grid-template-columns: 270px
       grid-template-rows: auto
-      grid-row-gap: 30px
+      grid-row-gap: 40px
     &__card
       justify-self: center
+      align-items: center
+      &:nth-child(3)
+        width: 270px
+      &:nth-child(6)
+        width: 270px
       &-title
-        max-width: 300px
+        width: 100%
+        text-align: center
+        // max-width: 230px
+        line-height: 20px
       &-text
-        max-width: 300px
+        text-align: center
+        // max-width: 270px
+        width: 100%
         font-size: 14px
+        line-height: 140%
       &-icon
-        width: 28px
-        height: 32px
+        width: 38px
+        height: 42px
+        margin-bottom: 15px
   .footer
     &__wrapper
       flex-direction: column

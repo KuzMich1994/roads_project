@@ -74,9 +74,9 @@ const swiper2 = new Swiper('.location__slider', {
       spaceBetween: 20,
     },
     769: {
-      spaceBetween: 30,
+      spaceBetween: 20,
       slidesPerView: 4,
-      width: 1807
+      width: 1507
     },
     320: {
       spaceBetween: 10,
