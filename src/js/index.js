@@ -18,7 +18,7 @@ import '../img/location-4.jpg';
 import showMobileMenu from './modules/showMobileMenu';
 import sendForm from './modules/sendForm';
 import showTextOnBanner from './modules/showTextOnBanner';
-import toggleTabs from './modules/toggleTabs';
+// import toggleTabs from './modules/toggleTabs';
 import scrollToBlock from './modules/scrollToBlock';
 
 const swiper = new Swiper('.signs__slider', {
@@ -106,5 +106,5 @@ swiper2.init();
 showMobileMenu();
 sendForm();
 showTextOnBanner();
-toggleTabs();
+// toggleTabs();
 scrollToBlock();
