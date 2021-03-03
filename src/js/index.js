@@ -8,7 +8,11 @@ import '../img/main-bg-2.png';
 import '../img/dots-1.svg';
 import '../img/general-bg.png';
 import '../img/general-dots.svg';
-import '../img/signs-slide.svg';
+import '../img/signs-1.png';
+import '../img/signs-2.png';
+import '../img/signs-3.png';
+import '../img/signs-4.png';
+import '../img/signs-5.png';
 import '../img/signs-button.svg';
 import '../img/discount-bg.png';
 import '../img/location-1.jpg';
@@ -36,7 +40,8 @@ const swiper = new Swiper('.signs__slider', {
       slidesPerView: 4
     },
     769: {
-      spaceBetween: -450
+      spaceBetween: 20,
+      width: 1350
     },
     320: {
       slidesPerView: 2,
