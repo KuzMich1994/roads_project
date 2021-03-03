@@ -64,11 +64,53 @@ const swiper = new Swiper('.signs__slider', {
     prevEl: '.signs__button-prev',
   },
 });
+// const swiper2 = new Swiper('.location__slider', {
+//   // Optional parameters
+//   direction: 'horizontal',
+//   loop: true,
+//   slidesPerView: 'auto',
+//   breakpoints: {
+//     1921: {
+//       slidesPerView: 3,
+//       spaceBetween: 20,
+//       width: 1920
+//     },
+//     1201: {
+//       spaceBetween: 20,
+//     },
+//     769: {
+//       spaceBetween: 20,
+//       slidesPerView: 4,
+//       // width: 1507
+//     },
+//     320: {
+//       spaceBetween: 10,
+//       slidesPerView: 2,
+//       // width: 510
+//     }
+//   },
+
+//   // If we need pagination
+//   pagination: {
+//     el: '.location__pagination',
+//     bulletClass: 'location__bullet',
+//     bulletActiveClass: 'location__bullet_active',
+//     clickable: true
+//   },
+
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: '.location__button-next',
+//     prevEl: '.location__button-prev',
+//   },
+// });
+
 const swiper2 = new Swiper('.location__slider', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
-  slidesPerView: 'auto',
+  slidesPerView: 4,
+  spaceBetween: 20,
   breakpoints: {
     1921: {
       slidesPerView: 3,
@@ -80,8 +122,7 @@ const swiper2 = new Swiper('.location__slider', {
     },
     769: {
       spaceBetween: 20,
-      slidesPerView: 4,
-      width: 1507
+      width: 2097,
     },
     320: {
       spaceBetween: 10,
