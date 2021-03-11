@@ -38,6 +38,10 @@ module.exports = {
           from: 'server',
           to: './'
         },
+        {
+          from: 'favicon',
+          to: './favicon'
+        }
       ]
     }),
   ],

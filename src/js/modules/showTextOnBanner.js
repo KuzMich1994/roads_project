@@ -16,9 +16,11 @@ const showTextOnBanner = () => {
     if (companyInput.value === '') {
       outputText.textContent = '';
     }
-    if (outputText.textContent.split('').length >= 18) {
-      // outputText.style.bottom = '133px';
-    }
+    // if (window.innerWidth >= 768) {
+    //   if (outputText.textContent.split('').length > 18) {
+    //     outputText.style.bottom = '133px';
+    //   }
+    // }
     // console.log(outputText.textContent.split('').length);
   });
 };

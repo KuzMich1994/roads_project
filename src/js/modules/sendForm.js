@@ -24,11 +24,7 @@ const sendForm = (createForm, discountForm) => {
 
   const postData = formData => fetch('./send.php', {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
     body: formData,
-    credentials: 'include'
   });
 
   const validateCompanyInput = (selector, regExp) => {
@@ -72,35 +68,29 @@ const sendForm = (createForm, discountForm) => {
     spiner.style.display = 'block';
   };
 
-  let formData;
+  // let formData;
 
   document.addEventListener('submit', e => {
     e.preventDefault();
     const target = e.target;
 
-    const body = {};
-
     if (target.matches('#create-sign__form')) {
+      messageBlock.append(spiner);
       messageBlock.append(statusMessage);
       showLoadMessage();
-      formData = new FormData(createForm);
-      for (const val of formData) {
-        body[val[0]] = val[1];
-      }
     }
 
     if (target.matches('#discount-form')) {
       messageBlock2.append(spiner);
       messageBlock2.append(statusMessage);
       showLoadMessage();
-      formData = new FormData(discountForm);
-      for (const val of formData) {
-        body[val[0]] = val[1];
-      }
     }
 
-    postData(JSON.stringify(body))
+    postData(new FormData(target))
       .then(response => {
+        response.json().then(data => {
+          console.log(data);
+        });
         if (response.status !== 200) {
           throw new Error('Status network not 200');
         }
@@ -127,10 +117,6 @@ const sendForm = (createForm, discountForm) => {
         phoneText.textContent = '';
         nameText.textContent = '';
         phoneText2.textContent = '';
-        // createBtn.disabled = true;
-        // discountBtn.disabled = true;
-        // discountBtn.style.filter = 'opacity(20%)';
-        // createBtn.style.filter = 'opacity(20%)';
         setTimeout(() => {
           statusMessage.remove();
           statusMessage2.remove();
