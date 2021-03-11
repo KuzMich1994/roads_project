@@ -41,6 +41,10 @@ module.exports = {
         {
           from: 'favicon',
           to: './favicon'
+        },
+        {
+          from: 'other',
+          to: './'
         }
       ]
     }),
