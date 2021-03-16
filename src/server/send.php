@@ -24,8 +24,8 @@ foreach ($_POST as $key => $value) {
     if ($key === 'site') {
         $keyTranslated = 'Сайт';
     }
-    if ($key === 'site') {
-        $keyTranslated = 'Сайт';
+    if ($key === 'email') {
+        $keyTranslated = 'Почта';
     }
     if ($key === 'phone') {
         $keyTranslated = 'Телефон';
@@ -60,13 +60,23 @@ try {
     // Настройки вашей почты
     $mail->Host       = 'smtp.mail.ru'; // SMTP сервера вашей почты
     $mail->Username   = 'sergey.student1994@mail.ru'; // Логин на почте
-    $mail->Password   = ''; // Пароль на почте
+    $mail->Password   = 'zayebalisuki'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('sergey.student1994@mail.ru', 'Дорожные Знаки'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('sergey.student1994@mail.ru', 'Сергей'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
     $mail->addAddress('drumer19940310@mail.ru');
+
+    // // Настройки вашей почты
+    // $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
+    // $mail->Username   = 'dorojnye.znaki@yandex.ru'; // Логин на почте
+    // $mail->Password   = 'olqFsdfHBDFJSd$4'; // Пароль на почте
+    // $mail->SMTPSecure = 'ssl';
+    // $mail->Port       = 465;
+    // $mail->setFrom('dorojnye.znaki@yandex.ru', 'Дорожные Знаки'); // Адрес самой почты и имя отправителя
+
+    // // Получатель письма
     // $mail->addAddress('tk@lmgmedia.ru');
     // $mail->addAddress('mirotin@lmgmedia.ru');
     // $mail->addAddress('sabirov@lmgmedia.ru');

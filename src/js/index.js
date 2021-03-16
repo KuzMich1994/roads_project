@@ -1,5 +1,6 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/swiper-bundle.css';
+import Inputmask from "inputmask";
 import '../index.html';
 import '../css/style.css';
 import '../sass/style.sass';
@@ -148,6 +149,27 @@ const swiper2 = new Swiper('.location__slider', {
 
 swiper.init();
 swiper2.init();
+
+const phoneInputs = document.querySelectorAll('[name="phone"]');
+const mailInput = document.getElementById('email');
+
+const inputMask = new Inputmask('+7 (999) 999-99-99', {
+  showMaskOnHover: false
+});
+const mailMask = new Inputmask('mail@mail.ru', {
+  mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{1,3}]",
+  showMaskOnHover: false
+  // greedy: false,
+  // definitions: {
+  //   '*': {
+  //     validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~\-]",
+  //     casing: "lower"
+  //   }
+  // }
+});
+
+inputMask.mask(phoneInputs);
+mailMask.mask(mailInput);
 
 showMobileMenu();
 sendForm();

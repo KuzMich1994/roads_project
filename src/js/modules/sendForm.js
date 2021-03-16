@@ -56,8 +56,8 @@ const sendForm = (createForm, discountForm) => {
       if (target.matches('#address')) {
         addressText.textContent = 'Пример: г.Москва ул.Арбат д.1 к.2 с.1';
       }
-      if (target.matches('#site')) {
-        siteText.textContent = 'Пример: https://www.google.com';
+      if (target.matches('#email')) {
+        siteText.textContent = 'Пример: mail@mail.ru';
       }
     });
   });
